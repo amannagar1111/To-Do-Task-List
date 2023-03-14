@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Voltaire&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Kanit:wght@500&display=swap");
+
+
+
 /* fonts */
 
 * {
   box-sizing: border-box;
 }
+
 
 body {
   padding: 0;
@@ -146,6 +150,11 @@ ul li a:hover::before {
   transform: scaleX(1);
 }
 
+
+
+
+/* task liste started */
+
 #container {
   width: 500px;
   margin: 70px auto;
@@ -157,13 +166,15 @@ ul li a:hover::before {
   background-color: #4caf50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 20px 0;
   width: 100px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-#addtask:hover {
+
+
+#add-task:hover {
   background-color: #000000;
 }
 .btn {
@@ -175,65 +186,15 @@ ul li a:hover::before {
   color: #000000;
   border: none;
   border-radius: 5px;
+  justify-content: center;
   transition: all .4s;
  }
  
- .btn:hover {
-  border-radius: 5px;
-  transform: translateY(-10px);
-  box-shadow: 0 7px 0 -2px #f85959,
-   0 15px 0 -4px #39a2db,
-   0 16px 10px -3px #39a2db;
- }
  
- .btn:active {
-  transition: all 0.2s;
-  transform: translateY(-5px);
-  box-shadow: 0 2px 0 -2px #f85959,
-   0 8px 0 -4px #39a2db,
-   0 12px 10px -3px #39a2db;
- }
-#task-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-div li {
-  padding: 12px 20px;
-  border: 1px solid #ddd;
-  margin-top: 100px;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: space-between;
-}
-div li:hover {
-  background-color: #ddd;
-}
-.delete {
-  background-color: #f44336;
-  color: white;
-  font-weight: bold;
-  border: none;
-  width: 20px;
-  display: flex;
-  justify-content: center;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.delete:hover {
-  background-color: #da190b;
-}
-div ul {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* input  */
 
 .input {
-  font-family: monospace;
-  max-width: 190px;
-  margin: 10px;
+  max-width: 400px;
   outline: none;
   border: 1px solid #dadada;
   padding: 10px;
@@ -252,3 +213,127 @@ div ul {
   border: 1px solid #02d610;
   box-shadow: 0 0 0 5px #42c83e5f
 }
+
+
+div li {
+  padding: 5px 10px;
+  border: 1px solid #ffffff;
+  margin-top: 50px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+div li:hover {
+  background-color: #ddd;
+}
+
+
+.delete {
+  background-color: #e44135;
+  border: none;
+  width: 60px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #da190b;
+  
+  transform: rotate(-10deg);
+
+}
+div ul {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 430px) {
+  
+  #container {
+    width: 370px;
+    margin: 10px;
+    margin-top: 20px;  
+  }
+  
+  .input{
+    max-width: 400px;
+    width: calc(1.5* 190px);
+  }
+  
+  div li { 
+     margin-top: 30px;
+  
+  }
+
+/* qwegfg
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #010002;
+  --link: rgb(176, 246, 34);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+} */
+
+
+
+
