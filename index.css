@@ -29,7 +29,7 @@ header {
 nav {
   position: relative;
   padding: 4px;
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,6 +269,10 @@ div ul {
   div li { 
      margin-top: 30px;
   
+  }
+
+  nav{
+    height: 150px;
   }
 }
 
