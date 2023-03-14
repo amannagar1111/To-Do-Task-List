@@ -13,12 +13,12 @@
        </div>
 
 
-       <!-- <div class="toggle-switch">
+       <div class="toggle-switch">
         <label class="switch-label">
           <input type="checkbox" class="checkbox">
           <span class="slider"></span>
         </label>
-      </div>   -->
+      </div>  
       <div class="menu-toggle"></div>
       <ul>
         <li><a id="button1" target="_blank" href="https://ai-text-to-image1.netlify.app">Other-Project</a></li>
@@ -43,8 +43,18 @@
 
     <script>
         var taskInput = document.getElementById("new-task");
+
+
         var addButton = document.getElementById("add-task");
+
+
         var taskList = document.getElementById("task-list");
+
+
+
+
+        // to add it
+
 
         function addTask() {
             var task = taskInput.value;
@@ -62,12 +72,39 @@
             li.parentNode.removeChild(li);
         }
 
+
+
         addButton.addEventListener("click", addTask);
         taskInput.addEventListener("keypress", function(event) {
             if (event.keyCode === 13) {
                 addTask();
             }
         });
+    </script>
+    <script>
+       
+const toggleSwitch = document.querySelector('.toggle-switch input[type="checkbox"]');
+
+
+toggleSwitch.addEventListener('change', function() {
+ 
+  if (this.checked) {
+    document.body.style.backgroundColor = "white";
+  } else {
+  
+    document.body.style.backgroundColor = "#212121";
+  }
+});
+    </script>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", function () {
+  this.classList.toggle("active");
+  nav.classList.toggle("active");
+});
     </script>
 </body>
 </html>

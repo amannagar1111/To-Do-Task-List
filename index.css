@@ -76,61 +76,7 @@ a {
   display: none;
 }
 
-@media (max-width: 430px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: #ffffff;
-    text-align: center;
-  }
 
-  nav li {
-    width: 100%;
-    text-align: center;
-    position: relative;
-  }
-
-  nav .logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  nav .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 5px;
-    color: #ac0808;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  nav .menu-toggle:before {
-    content: "\2630";
-  }
-
-  nav .menu-toggle.active:before {
-    content: "\2715";
-  }
-
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav ul.active li {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
 ul li a::before {
   content: "";
   position: absolute;
@@ -149,6 +95,7 @@ ul li a:hover::before {
   width: 100%;
   transform: scaleX(1);
 }
+
 
 
 
@@ -217,10 +164,12 @@ ul li a:hover::before {
 
 div li {
   padding: 5px 10px;
-  border: 1px solid #ffffff;
+  border: 5px solid #212121;
   margin-top: 50px;
   background-color: #ffffff;
   display: flex;
+  text-align: center;
+
   justify-content: space-between;
 }
 
@@ -271,12 +220,21 @@ div ul {
   
   }
 
+
   nav{
     height: 150px;
   }
+
+
+  #imagelogo{
+   width:100px;
+  }
+  
+  .toggle-switch{
+    left: 100cm;
 }
 
-/* qwegfg
+/* qwegfg */
 .toggle-switch {
   position: relative;
   width: 100px;
@@ -337,7 +295,7 @@ div ul {
   background-color: var(--dark);
   -webkit-box-shadow: none;
   box-shadow: none;
-} */
+}
 
 
 
