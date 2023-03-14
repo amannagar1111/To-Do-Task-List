@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  background-image: url(/pexels-ivan-samkov-7213439.jpg);
+  background-image: url(/pexels-ivan-samkov-7213439-min.jpg);
   padding: 0px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -270,6 +270,7 @@ div ul {
      margin-top: 30px;
   
   }
+}
 
 /* qwegfg
 .toggle-switch {
