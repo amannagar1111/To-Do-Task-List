@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+<link rel="stylesheet" href="/index.css">   
+</head>
+<header>
+    <nav> 
+      <div class="logo">
+        <img id="imagelogo"src="/to-do-low-resolution-logo-color-on-transparent-background.png">
+      </div>
+      <div class="menu-toggle"></div>
+      <ul>
+        <li><a id="button1" target="_blank" href="https://ai-text-to-image1.netlify.app">Other-Project</a></li>
+        <li><a id="button1"  target="_blank" href="https://www.linkedin.com/in/amannagar241/">Linkedin</a></li>
+        <li><a id="button1" target="_blank" href="https://github.com/amannagar1111/Ai-image-Generator.git">Source</a></li>
+        <li><a id="button1"  target="_blank" href="https://github.com/amannagar1111">Git-Hub</a></li>
+      </ul>
+    </nav>
+</header>
+<body>
+    <div id="container">
+        <input id="new-task" placeholder="Add to-do list task.." class="input" name="text" type="text">
+        <button id="add-task">Add</button>
+        <ul id="task-list"></ul>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var taskInput = document.getElementById("new-task");
+        var addButton = document.getElementById("add-task");
+        var taskList = document.getElementById("task-list");
+
+        function addTask() {
+            var task = taskInput.value;
+            if (task) {
+                var li = document.createElement("li");
+                li.innerHTML = task + "<button class='delete'>X</button>";
+                taskList.appendChild(li);
+                taskInput.value = "";
+                li.querySelector(".delete").addEventListener("click", deleteTask);
+            }
+        }
+
+        function deleteTask() {
+            var li = this.parentNode;
+            li.parentNode.removeChild(li);
+        }
+
+        addButton.addEventListener("click", addTask);
+        taskInput.addEventListener("keypress", function(event) {
+            if (event.keyCode === 13) {
+                addTask();
+            }
+        });
+    </script>
+</body>
+</html>
